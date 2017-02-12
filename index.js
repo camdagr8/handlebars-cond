@@ -6,12 +6,12 @@
  */
 
 var tandt = function (l, r) {
-	return (typeof l !== 'undefined' && typeof r !== 'undefined' && l !== null && r !== null);
+	return (typeof l !== 'undefined' && typeof r !== 'undefined' && l !== 'undefined' && r !== 'undefined' && l !== null && r !== null);
 };
 
 var tort = function (l, r) {
-	if (typeof l !== 'undefined' && l !== null) { return true; }
-	if (typeof r !== 'undefined' && r !== null) { return true; }
+	if (typeof l !== 'undefined' && l !== null && l !== '' && l !== 'undefined') { return true; }
+	if (typeof r !== 'undefined' && r !== null && r !== '' && r !== 'undefined') { return true; }
 	return false;
 };
 
