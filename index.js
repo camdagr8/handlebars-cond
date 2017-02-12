@@ -1,9 +1,20 @@
 /**
  * Handlebars cond helper
  * @param lvalue
- * @param conditon {String} == === != !== < > <= >= typeof
+ * @param conditon {String} == === != !== < > <= >= && and || or typeof
  * @param rvalue {Number} How much to increment per iteration.
  */
+
+var tandt = function (l, r) {
+	return (typeof l !== 'undefined' && typeof r !== 'undefined' && l !== null && r !== null);
+};
+
+var tort = function (l, r) {
+	if (typeof l !== 'undefined' && l !== null) { return true; }
+	if (typeof r !== 'undefined' && r !== null) { return true; }
+	return false;
+};
+
 var test = function(lvalue, operator, rvalue) {
     var operators, result;
 
@@ -21,13 +32,13 @@ var test = function(lvalue, operator, rvalue) {
 		'<=' 		: function(l, r) { return l <= r; },
 		'>=' 		: function(l, r) { return l >= r; },
 		'typeof'	: function(l, r) { return typeof l == r; },
-		'&&' 		: function(l, r) { return (typeof l !== 'undefined' && typeof r !== 'undefined' && l !== null && r !== null); },
-		'||' 		: function(l, r) {
-			if (typeof l !== 'undefined' && l !== null) { return true; }
-			if (typeof r !== 'undefined' && r !== null) { return true; }
-			return false;
-		}
+		'&&' 		: function(l, r) { return tandt(l, r); },
+		'and' 		: function (l, r) { return tandt(l, r); },
+		'||' 		: function (l, r) { return tort(l, r); },
+		'or' 		: function (l, r) { return tort(l, r); }
 	};
+
+	operator = String(operator).toLowerCase();
 
 	if (!operators[operator]) {
 		throw new Error("Handlerbars Helper 'cond' doesn't recognize the operator " + operator);

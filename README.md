@@ -24,5 +24,5 @@ I do not think so!
 | Argument | Description  |
 |:----------|:------------|
 | lvalue    | The first value to compare.|
-| operator  | The comparison operator. Values: == === != !== < > <= >= typeof. |
+| operator  | The comparison operator. Values: == === != !== < > <= >=  && and \|\| or typeof. |
 | rvalue    | The second value to compare.

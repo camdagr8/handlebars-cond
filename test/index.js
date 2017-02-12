@@ -41,13 +41,13 @@ describe('#cond(null, "||", null)', function() {
 
 describe('#cond(null, "||", 1)', function() {
   it('this or that -> true', function() {
-	cond(null, '||', 1).should.equal(true);
+	cond(null, 'or', 1).should.equal(true);
   });
 });
 
 describe('#cond(1, "&&", 1)', function() {
   it('this and that -> true', function() {
-	cond(1, '&&', 1).should.equal(true);
+	cond(1, 'and', 1).should.equal(true);
   });
 });
 
