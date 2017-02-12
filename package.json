@@ -1,6 +1,6 @@
 {
   "name": "handlebars-cond",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Handlebars helper that allows you to use comparison conditions like a typical IF statement.",
   "main": "index.js",
   "scripts": {
