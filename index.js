@@ -20,7 +20,13 @@ var test = function(lvalue, operator, rvalue) {
 		'>' 		: function(l, r) { return l > r; },
 		'<=' 		: function(l, r) { return l <= r; },
 		'>=' 		: function(l, r) { return l >= r; },
-		'typeof'	: function(l, r) { return typeof l == r; }
+		'typeof'	: function(l, r) { return typeof l == r; },
+		'&&' 		: function(l, r) { return (typeof l !== 'undefined' && typeof r !== 'undefined' && l !== null && r !== null); },
+		'||' 		: function(l, r) {
+			if (typeof l !== 'undefined' && l !== null) { return true; }
+			if (typeof r !== 'undefined' && r !== null) { return true; }
+			return false;
+		}
 	};
 
 	if (!operators[operator]) {
