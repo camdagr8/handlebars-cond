@@ -1,8 +1,8 @@
 /**
  * Handlebars cond helper
- * @param param1
+ * @param lvalue
  * @param conditon {String} == === != !== < > <= >= typeof
- * @param inc {Number} How much to increment per iteration.
+ * @param rvalue {Number} How much to increment per iteration.
  */
 var test = function(lvalue, operator, rvalue) {
     var operators, result;
