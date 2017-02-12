@@ -1,0 +1,30 @@
+{
+  "name": "handlebars-cond",
+  "version": "1.0.0",
+  "description": "Handlebars helper that allows you to use comparison conditions like a typical IF statement.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camdagr8/handlebars-cond.git"
+  },
+  "keywords": [
+    "handlebars",
+    "iterate",
+    "loop",
+    "helper",
+    "block"
+  ],
+  "author": "Cam Tullos <cam@tullos.ninja> (http://cam.tullos.ninja)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/camdagr8/handlebars-cond/issues"
+  },
+  "homepage": "https://github.com/camdagr8/handlebars-cond#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
