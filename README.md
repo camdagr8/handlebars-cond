@@ -1,4 +1,5 @@
 # handlebars-cond
+
 Handlebars helper that allows you to use comparison conditions like a typical IF statement.
 ---
 ##### Usage
@@ -13,7 +14,7 @@ correct!
 {{#cond 0 '>' 300}}
 Are you sure?
 {{else}}
-I don't think so
+I do not think so!
 {{/cond}}
 ```
 
