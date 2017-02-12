@@ -6,7 +6,7 @@
  */
 
 var tandt = function (l, r) {
-	return (typeof l !== 'undefined' && typeof r !== 'undefined' && l !== 'undefined' && r !== 'undefined' && l !== null && r !== null);
+	return (typeof l !== 'undefined' && typeof r !== 'undefined' && l !== 'undefined' && r !== 'undefined' && l !== null && r !== null && l !== '' && r !== '');
 };
 
 var tort = function (l, r) {
