@@ -68,4 +68,4 @@ var cond = function(lvalue, operator, rvalue, options) {
 module.exports = {
 	cond: cond,
 	test: test
-}
+};
